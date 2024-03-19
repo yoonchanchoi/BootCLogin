@@ -13,7 +13,7 @@ class SignUpActivity : AppCompatActivity() {
     private lateinit var etName: EditText
     private lateinit var etId: EditText
     private lateinit var etPw: EditText
-    private lateinit var btnSignin: Button
+    private lateinit var btnSignUp: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,14 +29,14 @@ class SignUpActivity : AppCompatActivity() {
     }
 
     private fun initSet() {
-        etName = findViewById<EditText>(R.id.et_sigin_name)
-        etId = findViewById<EditText>(R.id.et_sigin_id)
-        etPw = findViewById<EditText>(R.id.et_sigin_pw)
-        btnSignin = findViewById<Button>(R.id.btn_sigin_signIn)
+        etName = findViewById<EditText>(R.id.et_sign_up_name)
+        etId = findViewById<EditText>(R.id.et_sign_up_id)
+        etPw = findViewById<EditText>(R.id.et_sign_up_pw)
+        btnSignUp = findViewById<Button>(R.id.btn_sign_up)
     }
 
     private fun initListener() {
-        btnSignin.setOnClickListener {
+        btnSignUp.setOnClickListener {
             if (!etId.text.isNullOrEmpty() && !etPw.text.isNullOrEmpty() && !etName.text.isNullOrEmpty()) {
                 finish()
             } else {

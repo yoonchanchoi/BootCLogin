@@ -14,7 +14,7 @@ class SignInActivity : AppCompatActivity() {
     private lateinit var etId: EditText
     private lateinit var etPw: EditText
     private lateinit var btnLogin: Button
-    private lateinit var btnSignin: Button
+    private lateinit var btnSignUp: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,7 +33,7 @@ class SignInActivity : AppCompatActivity() {
         etId = findViewById<EditText>(R.id.et_id)
         etPw = findViewById<EditText>(R.id.et_pw)
         btnLogin = findViewById<Button>(R.id.btn_login)
-        btnSignin = findViewById<Button>(R.id.btn_signin)
+        btnSignUp = findViewById<Button>(R.id.btn_sign_up)
     }
 
     private fun initListener() {
@@ -48,7 +48,7 @@ class SignInActivity : AppCompatActivity() {
                 Toast.makeText(this, "아아디/비밀번호를 확인해주세요", Toast.LENGTH_SHORT).show()
             }
         }
-        btnSignin.setOnClickListener {
+        btnSignUp.setOnClickListener {
             val intent = Intent(this, SignUpActivity::class.java)
             startActivity(intent)
         }
