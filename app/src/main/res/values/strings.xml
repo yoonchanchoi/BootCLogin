@@ -14,4 +14,14 @@
     <string name="strNameHint">이름을 입력하세요.</string>
     <string name="strSignUp">회원가입</string>
     <string name="strId">아이디</string>
+
+<array name="myImages">
+    <item>@drawable/jelong1</item>
+    <item>@drawable/jelong2</item>
+    <item>@drawable/jelong3</item>
+    <item>@drawable/jelong4</item>
+    <item>@drawable/orrn</item>
+</array>
+
 </resources>
+
