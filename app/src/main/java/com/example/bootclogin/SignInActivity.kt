@@ -47,7 +47,6 @@ class SignInActivity : AppCompatActivity() {
                 Toast.makeText(this, "로그인 성공", Toast.LENGTH_SHORT).show()
                 val intent = Intent(this, HomeActivity::class.java).apply {
                     this.putExtra("id", etId.text.toString())
-                    this.putExtra("pw", etPw.text)
                 }
                 startActivity(intent)
             } else {
@@ -67,6 +66,4 @@ class SignInActivity : AppCompatActivity() {
             }
         }
     }
-
-
 }
