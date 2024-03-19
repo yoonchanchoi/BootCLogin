@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">BootCLogin</string>
+    <string name="strNameValue">이름: 최윤찬</string>
+    <string name="strAgeValue">나이: 만 27</string>
+    <string name="strMBTIValue">MBTI: ISFJ-T</string>
+    <string name="strIdTag">아이디:&#160;</string>
+    <string name="strFinish">종료</string>
+    <string name="strName">아이디</string>
+    <string name="strPw">비밀번호</string>
+    <string name="strIdHint">아이디를 입력하세요.</string>
+    <string name="strPwHint">비밀번호를 입력하세요.</string>
+    <string name="strLogin">로그인</string>
+    <string name="strSignin">회원가입</string>
+    <string name="strNameHint">이름을 입력하세요.</string>
+    <string name="strSignUp">회원가입</string>
+</resources>
