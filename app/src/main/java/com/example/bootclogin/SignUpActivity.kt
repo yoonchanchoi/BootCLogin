@@ -1,5 +1,6 @@
 package com.example.bootclogin
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -13,7 +14,7 @@ class SignUpActivity : AppCompatActivity() {
     private lateinit var etName: EditText
     private lateinit var etId: EditText
     private lateinit var etPw: EditText
-    private lateinit var btnSignin: Button
+    private lateinit var btnSignUp: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,15 +30,20 @@ class SignUpActivity : AppCompatActivity() {
     }
 
     private fun initSet() {
-        etName = findViewById<EditText>(R.id.et_sigin_name)
-        etId = findViewById<EditText>(R.id.et_sigin_id)
-        etPw = findViewById<EditText>(R.id.et_sigin_pw)
-        btnSignin = findViewById<Button>(R.id.btn_sigin_signIn)
+        etName = findViewById<EditText>(R.id.et_sign_up_name)
+        etId = findViewById<EditText>(R.id.et_sign_up_id)
+        etPw = findViewById<EditText>(R.id.et_sign_up_pw)
+        btnSignUp = findViewById<Button>(R.id.btn_sign_up_signIn)
     }
 
     private fun initListener() {
-        btnSignin.setOnClickListener {
+        btnSignUp.setOnClickListener {
             if (!etId.text.isNullOrEmpty() && !etPw.text.isNullOrEmpty() && !etName.text.isNullOrEmpty()) {
+                val intent = Intent(this, SignInActivity::class.java).apply {
+                    this.putExtra("id", etId.text.toString())
+                    this.putExtra("pw", etPw.text.toString())
+                }
+                setResult(RESULT_OK, intent)
                 finish()
             } else {
                 Toast.makeText(this, "입력되지 않은 정보가 있습니다", Toast.LENGTH_SHORT).show()
