@@ -33,7 +33,7 @@ class SignUpActivity : AppCompatActivity() {
         etName = findViewById<EditText>(R.id.et_sign_up_name)
         etId = findViewById<EditText>(R.id.et_sign_up_id)
         etPw = findViewById<EditText>(R.id.et_sign_up_pw)
-        btnSignUp = findViewById<Button>(R.id.btn_sign_up_signIn)
+        btnSignUp = findViewById<Button>(R.id.btn_sign_up)
     }
 
     private fun initListener() {
