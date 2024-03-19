@@ -40,9 +40,10 @@ class SignInActivity : AppCompatActivity() {
         btnLogin.setOnClickListener {
             if (!etId.text.isNullOrEmpty() && !etPw.text.isNullOrEmpty()) {
                 Toast.makeText(this, "로그인 성공", Toast.LENGTH_SHORT).show()
-                val intent = Intent(this, HomeActivity::class.java)
-                intent.putExtra("id", etId.text.toString())
-                intent.putExtra("pw", etPw.text)
+                val intent = Intent(this, HomeActivity::class.java).apply {
+                    this.putExtra("id", etId.text.toString())
+                    this.putExtra("pw", etPw.text)
+                }
                 startActivity(intent)
             } else {
                 Toast.makeText(this, "아아디/비밀번호를 확인해주세요", Toast.LENGTH_SHORT).show()
